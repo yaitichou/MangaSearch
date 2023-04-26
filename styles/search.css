@@ -1,0 +1,238 @@
+html {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.form-item {
+  padding: 5px;
+}
+#valider {
+  all: unset;
+  background-color: #ac0e35;
+  border-radius: 5px;
+  text-align: center;
+  color: white;
+  min-height: 50px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  width: 100%;
+  cursor: pointer;
+}
+#valider > * {
+  margin: 5px;
+}
+
+@font-face {
+  font-family: japaneseFont;
+  src: url(fonts/Japanese_3017.ttf);
+}
+@font-face {
+  font-family: japaneseFont2;
+  src: url(fonts/MavenProLight-200.otf);
+}
+h1 {
+  padding: 20px;
+  font-family: japaneseFont;
+}
+
+table.tableResults {
+  border: 2px solid #ac0e35;
+  background-color: #eee7db;
+  width: 100%;
+  text-align: center;
+  border-collapse: collapse;
+}
+table.tableResults td,
+table.tableResults th {
+  border: 1px solid #ac809b;
+  padding: 3px 2px;
+}
+table.tableResults tbody td {
+  font-size: 13px;
+}
+table.tableResults tr:nth-child(even) {
+  background: #e59494;
+}
+table.tableResults td .links a {
+  display: inline-block;
+  background: #ffffff;
+  color: #ac0e35;
+}
+
+table.tableResults thead {
+  background: #ac0e35;
+}
+table.tableResults thead th {
+  font-size: 18px;
+  font-weight: bold;
+  color: #ffffff;
+  text-align: center;
+  border-left: 2px solid #ac0e35;
+}
+table.tableResults thead th:first-child {
+  border-left: none;
+}
+
+table.tableResults tfoot {
+  font-size: 13px;
+  font-weight: bold;
+  color: #ffffff;
+  background: #ac0e35;
+}
+table.tableResults tfoot td {
+  font-size: 13px;
+}
+table.tableResults tfoot .links {
+  text-align: right;
+}
+table.tableResults tfoot .links a {
+  display: inline-block;
+  background: #ffffff;
+  color: #ac0e35;
+  padding: 2px 8px;
+  border-radius: 5px;
+}
+.search {
+  width: 50%;
+  display: grid;
+  grid-auto-columns: 1fr;
+  grid-template-columns: 0.8fr 0.2fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    'search-bar language'
+    'search-bt search-bt';
+}
+
+#language {
+  grid-area: language;
+  padding: 5px;
+}
+
+#search-bar {
+  grid-area: search-bar;
+  padding: 5px;
+}
+
+#search-bt {
+  grid-area: search-bt;
+  padding: 5px;
+}
+
+#search-bt button {
+  width: 100%;
+}
+.rotating-icon {
+  transform: rotate(0deg);
+  transition: transform 0.1s linear;
+}
+
+.rotating-icon.active {
+  transform: rotate(180deg);
+  transition: transform 0.1s linear;
+}
+
+#champs-recherche-avancee {
+  display: flex;
+  flex-direction: column;
+  border: #ac0e35 solid;
+  border-radius: 5px 5px 5px 5px;
+}
+
+#champs-recherche-avancee,
+#champs-recherche-avancee * {
+  height: 0;
+  min-height: 0;
+  opacity: 0;
+  padding: 0;
+  visibility: unset;
+}
+
+#champs-recherche-avancee.active,
+#champs-recherche-avancee.active * {
+  height: initial;
+  opacity: 1;
+  padding: 5px;
+  visibility: visible;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.mangaTitle {
+  justify-content: space-evenly;
+  font-size: 50px;
+  word-break: break-word;
+  width: 100%;
+  font-weight: 1000;
+  text-align: center;
+  font-family: japaneseFont2;
+}
+
+.cell img {
+  width: 300px;
+  height: 400px;
+}
+
+.author {
+  padding: 20px 0px 0px 20px;
+  font-size: 25px;
+  display: inline-block;
+  word-break: break-word;
+  width: 100%;
+}
+.demographic {
+  padding: 0px 0px 0px 20px;
+  font-size: 25px;
+  display: inline-block;
+  word-break: break-word;
+  width: 100%;
+}
+.cell {
+  border: solid;
+  justify-content: space-evenly;
+  margin: 10px;
+  padding: 20px;
+  width: 90%;
+  border-radius: 1em;
+  border-color: #ac0e35;
+}
+
+.cell:hover {
+  background-color: #ac0e35;
+  color: white;
+  transition: 0.5s;
+}
+
+.cell a {
+  color: #ac0e35;
+}
+.cell:hover a {
+  transition: 0.5s;
+  color: white;
+}
+
+.container {
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.description {
+  padding: 20px;
+  font-size: 20px;
+  border-top: solid;
+  border-top-color: grey;
+  text-align: justify;
+  text-justify: inter-word;
+}
